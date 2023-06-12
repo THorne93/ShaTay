@@ -1,36 +1,20 @@
 window.addEventListener("load", (event) => {
-
-    const greet = document.getElementById("greeting")
-   const homeIMG = document.getElementById("imghome")
-    const chipbtn = document.getElementById("homelinkchip")
-    const bandbtn = document.getElementById("homelinkband")
-    const podbtn = document.getElementById("homelinkpod")
-
-    const homepic = [
-        "homechip.jpg",
+    const homeImg = document.getElementById("imghome") as HTMLImageElement
+    const chipBtn = document.getElementById("homelinkchip") as HTMLAnchorElement
+    const bandBtn = document.getElementById("homelinkband") as HTMLAnchorElement
+    const podBtn = document.getElementById("homelinkpod") as HTMLAnchorElement
 
 
-    ]
-
-    const t = new Date();
-    let hour = t.getUTCHours() + 1;
-    if(hour > 0 && hour < 12) {
-        greet.innerHTML = "Good Morning"
-    }
-    else if(hour >= 12 && hour <= 18) {
-        greet.innerHTML = "Good Afternoon"
-    }
-    else {
-        greet.innerHTML = "Good Evening"
-    }
-
-    chipbtn.addEventListener('hover', () => {
-        chipchange()
+    chipBtn.addEventListener('mouseover', () => {
+        homeImg.src = "img/homechip.jpg"
       })
 
-    function chipchange (){
-        homeIMG.src = "homechip.jpg"
-    }
+      bandBtn.addEventListener('mouseover', () => {
+        homeImg.src = "img/muffins.jpg"
+      })
+
+      podBtn.addEventListener('mouseover', () => {
+        homeImg.src = "img/superfun.png"
+      })
 
 })
- 
