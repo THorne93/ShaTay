@@ -1,0 +1,87 @@
+.square {
+  background-color: rgba(246, 162, 52, 0.488);
+  border-color: rgb(232, 140, 19);
+  border-width: 1px;
+  border-style: solid;
+  font-family: "Inter", sans-serif;
+  width: 200px;
+  height: 230px;
+  text-align: center;
+  border-radius: 15px;
+  display: block;
+  animation: fadeIn 200ms ease-in;
+}
+
+.square:hover {
+  cursor: pointer;
+}
+
+.pic {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  border-radius: 25px;
+  height: 180px;
+  width: 180px;
+  position: initial;
+  opacity: 1;
+}
+
+.h1 {
+  font-size: 17px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  max-width: 1200px;
+}
+
+@media (min-width: 200px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 750px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1500px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 1800px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.main-chip {
+  margin-left: 300px;
+  background-color: rgba(214, 132, 39, 0.7568627451);
+  text-align: left;
+  height: min-content;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+/*# sourceMappingURL=sidenav.css.map */

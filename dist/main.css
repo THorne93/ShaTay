@@ -1,0 +1,434 @@
+.dropdown-container-one {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  transition: all ease-in-out 1s;
+}
+
+.dropdownbtn-one,
+.dropdownbtn-two,
+.dropdownbtn-three {
+  padding: 6px 16px 6px 12px;
+  text-align: left;
+  width: 100%;
+  color: gray;
+  background: none;
+  font-size: 2px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-family: "Mukta", sans-serif;
+  text-decoration: none;
+}
+
+.dropdownbtn-one:hover + .dropdown-container-one,
+.dropdown-container-one:hover {
+  display: block;
+  visibility: visible;
+}
+.dropdownbtn-one:hover + .dropdown-container-one .dropdown-item-one-a,
+.dropdown-container-one:hover .dropdown-item-one-a {
+  animation: fadeIn 200ms ease-in;
+}
+.dropdownbtn-one:hover + .dropdown-container-one .dropdown-item-one-b,
+.dropdown-container-one:hover .dropdown-item-one-b {
+  animation: fadeIn 350ms ease-in;
+}
+.dropdownbtn-one:hover + .dropdown-container-one .dropdown-item-one-c,
+.dropdown-container-one:hover .dropdown-item-one-c {
+  animation: fadeIn 500ms ease-in;
+}
+.dropdownbtn-one:hover + .dropdown-container-one .dropdown-item-one-d,
+.dropdown-container-one:hover .dropdown-item-one-d {
+  animation: fadeIn 650ms ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dropdownbtn-two:hover + .dropdown-container-two,
+.dropdown-container-two:hover {
+  display: block;
+}
+.dropdownbtn-two:hover + .dropdown-container-two .dropdown-item-two-a,
+.dropdown-container-two:hover .dropdown-item-two-a {
+  animation: fadeIn 200ms ease-in;
+}
+.dropdownbtn-two:hover + .dropdown-container-two .dropdown-item-two-b,
+.dropdown-container-two:hover .dropdown-item-two-b {
+  animation: fadeIn 350ms ease-in;
+}
+.dropdownbtn-two:hover + .dropdown-container-two .dropdown-item-two-c,
+.dropdown-container-two:hover .dropdown-item-two-c {
+  animation: fadeIn 500ms ease-in;
+}
+.dropdownbtn-two:hover + .dropdown-container-two .dropdown-item-two-d,
+.dropdown-container-two:hover .dropdown-item-two-d {
+  animation: fadeIn 650ms ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dropdownbtn-three:hover + .dropdown-container-three,
+.dropdown-container-three:hover {
+  display: block;
+}
+.dropdownbtn-three:hover + .dropdown-container-three .dropdown-item-three-a,
+.dropdown-container-three:hover .dropdown-item-three-a {
+  animation: fadeIn 200ms ease-in;
+}
+.dropdownbtn-three:hover + .dropdown-container-three .dropdown-item-three-b,
+.dropdown-container-three:hover .dropdown-item-three-b {
+  animation: fadeIn 350ms ease-in;
+}
+.dropdownbtn-three:hover + .dropdown-container-three .dropdown-item-three-c,
+.dropdown-container-three:hover .dropdown-item-three-c {
+  animation: fadeIn 500ms ease-in;
+}
+.dropdownbtn-three:hover + .dropdown-container-three .dropdown-item-three-d,
+.dropdown-container-three:hover .dropdown-item-three-d {
+  animation: fadeIn 650ms ease-in;
+}
+.dropdownbtn-three:hover + .dropdown-container-three .dropdown-item-three-e,
+.dropdown-container-three:hover .dropdown-item-three-e {
+  animation: fadeIn 800ms ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dropdown-container-two {
+  display: none;
+}
+
+.dropdown-container-three {
+  display: none;
+}
+
+.sidenav {
+  position: fixed;
+  z-index: 1;
+  background-color: #111;
+  opacity: 0.9;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.sidenav a,
+.dropdownbtn,
+.sidenavtxt {
+  padding: 6px 16px 6px 12px;
+  text-align: left;
+  display: block;
+  width: 100%;
+  color: gray;
+  background: none;
+  font-size: 20px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-family: "Mukta", sans-serif;
+  text-decoration: none;
+}
+
+.sidenavbottom {
+  padding: 6px 16px 6px 12px;
+  text-align: left;
+  width: 100%;
+  color: gray;
+  background: none;
+  font-size: 20px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-family: "Mukta", sans-serif;
+  position: fixed;
+  bottom: 10px;
+  text-decoration: none;
+}
+
+.sidenav a:hover,
+.dropdownbtn:hover,
+.sidenavbottom:hover {
+  color: white;
+  transition: 200ms;
+}
+
+.sfap-container {
+  display: none;
+  position: relative;
+}
+
+.charts-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: rgb(250, 200, 80);
+  border-color: black;
+  border-radius: 6px;
+  border-style: solid;
+}
+
+.button-sfap-drop:hover + .sfap-container,
+.sfap-container:hover {
+  visibility: visible;
+  position: relative;
+  display: flex;
+  animation: fadeIn 200ms ease-in;
+}
+
+.sfap-drop-content {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  color: black;
+  width: 50%;
+}
+
+.square {
+  background-color: rgba(246, 162, 52, 0.488);
+  border-color: rgb(232, 140, 19);
+  border-width: 1px;
+  border-style: solid;
+  font-family: "Inter", sans-serif;
+  width: 200px;
+  height: 230px;
+  text-align: center;
+  border-radius: 15px;
+  display: block;
+  animation: fadeIn 200ms ease-in;
+}
+
+.square:hover {
+  cursor: pointer;
+}
+
+.pic {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  border-radius: 25px;
+  height: 180px;
+  width: 180px;
+  position: initial;
+  opacity: 1;
+}
+
+.h1 {
+  font-size: 17px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  max-width: 1200px;
+}
+
+@media (min-width: 200px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 750px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1500px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 1800px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.main-chip {
+  margin-left: 300px;
+  background-color: rgba(214, 132, 39, 0.7568627451);
+  text-align: left;
+  height: min-content;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.body {
+  background-color: black;
+}
+
+.background-image {
+  opacity: 0.5;
+}
+
+.main {
+  margin-left: 300px;
+  background-color: #111;
+  text-align: center;
+  height: min-content;
+  border-radius: 8px;
+}
+
+.main-transparent {
+  margin-left: 300px;
+  text-align: center;
+  height: min-content;
+  border-radius: 8px;
+}
+
+.indeximg {
+  position: relative;
+  align-self: baseline;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+}
+
+.buttonbox {
+  display: flex;
+}
+
+.button-sfap {
+  color: black;
+  background-color: rgb(250, 200, 80);
+  width: 25%;
+  position: relative;
+  display: inline;
+  font-size: 42px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: black;
+  text-decoration: none;
+}
+
+.button-sfap-drop {
+  color: black;
+  background-color: rgb(250, 200, 80);
+  font-size: 42px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.button-sfap:hover, .button-sfap-drop:hover {
+  color: red;
+  transition: 100ms;
+}
+
+.fontstandard {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-family: "Mukta", sans-serif;
+  margin-left: 8px;
+  text-align: left;
+}
+
+.fontheader {
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  font-family: "Mukta", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.homewrap {
+  position: fixed;
+  margin-left: 35%;
+  color: aliceblue;
+  text-align: center;
+  font-size: 32px;
+  border: 4px;
+  display: grid;
+  grid-gap: 4px;
+  font-family: "Inter", sans-serif;
+  font-family: "Mukta", sans-serif;
+}
+
+.texthome {
+  background-color: #111;
+  color: white;
+  width: auto;
+  position: relative;
+  text-decoration: none;
+}
+
+.texthome:hover {
+  background-color: rgba(17, 17, 17, 0.6156862745);
+  color: red;
+  transition: 200ms;
+}
+
+.imghomescreen {
+  height: 400px;
+  width: 400px;
+}
+
+.innerText {
+  font-size: 16px;
+  color: orange;
+}
+
+.table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+}
+
+th {
+  font-size: 24px;
+  font-style: italic;
+  cursor: pointer;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(odd) {
+  background-color: #e71313;
+}
+
+tr:nth-child(even) {
+  background-color: #edae00;
+}
+
+/*# sourceMappingURL=main.css.map */

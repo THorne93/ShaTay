@@ -2,44 +2,54 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="./dist/main.css">
     <script type="module" src="./dist/sidenav.js"  defer></script>
+    <script type="module" src="./dist/chipadvisor.js"  defer></script>
     <title>Chip Advisor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Mukta:wght@200&display=swap" rel="stylesheet">
     
 </head>
-<body class="body">
+
+<body style="background-image: url('img/chipbackground.jpg');
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
     <div class="sidenav">
         <div id="greeting" class="sidenavtxt"></div>
         <br>
         <br>
-        <a href="chipadvisor.html" class="dropdownbtn">Chip Advisor</a>
-        <div class="dropdown-container">
-            <a href="">Link 1</a>
-            <a href="">Link 2</a>
-            <a href="">Link 3</a>
-            <a href="">Link 4</a>
+        <a href="chipadvisor.html" class="dropdownbtn-one">Chip Advisor</a>
+        <div class="dropdown-container-one">
+            <a class="dropdown-item-one-a" href="">Link 1</a>
+            <a class="dropdown-item-one-b" href="">Link 2</a>
+            <a class="dropdown-item-one-c" href="">Link 3</a>
+            <a class="dropdown-item-one-d" href="">Link 4</a>
         </div>
-        <a href="theenglishmuffins.html" class="dropdownbtn">The English Muffins</a>
-        <div class="dropdown-container">
-            <a href="">Chip Advisor</a>
-            <a href="">The English Muffins</a>
-            <a href="">Super Fun Amazing Podcast</a>
-            <a href="">Random</a>
+        <a href="theenglishmuffins.html" class="dropdownbtn-two">The English Muffins</a>
+        <div class="dropdown-container-two">
+            <a class="dropdown-item-two-a" href="">Link 1</a>
+            <a class="dropdown-item-two-b" href="">Link 2</a>
+            <a class="dropdown-item-two-c" href="">Link 3</a>
+            <a class="dropdown-item-two-d" href="">Link 4</a>
         </div>
-        <a href="sfap.html" class="dropdownbtn">Super Fun Amazing Podcast</a>
-        <div class="dropdown-container">
-                <a href="">Chip Advisor</a>
-                <a href="">The English Muffins</a>
-                <a href="">Super Fun Amazing Podcast</a>
-                <a href="">Random</a>    
-        </div>        
-      <br>
+        <a href="sfap.html" class="dropdownbtn-three">Super Fun Amazing Podcast</a>
+        <div class="dropdown-container-three">
+            <a class="dropdown-item-three-a" href="">Episodes</a>
+            <a class="dropdown-item-three-b" href="">Agony Bros</a>
+            <a class="dropdown-item-three-c" href="charts.html">Charts</a>
+            <a class="dropdown-item-three-e" href="">Josh and Taylor</a>
+        </div>
+        <br>
 
-      <button class="sidenavbottom">About Us</button>
+        <button class="sidenavbottom">About Us</button>
     </div>
-
+ 
+    <div class="main-chip">"I don't care about pictures or any of that shit. I'm going to go to bars/pubs/restaurants and give a review based on the quality of their chips. And only that. I'll judge them off many factors, including; taste, crispness, texture, seasoning, sauces and maybe others I don't know yet."<br> Taylor Horne, 2018</div>
+   <div class="main-transparent">
+        <card id="app" class="card grid-container"> 
+ </div>
 </body>
+
 </html>

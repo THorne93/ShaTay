@@ -5,7 +5,7 @@
   "main": "script.js",
   "type": "module",
   "scripts": {
-    "sass-watch": "sass --watch ./sass/main.scss:./dist/style.css",
+    "sass-watch": "sass --watch ./sass/main.scss:./dist/main.css ./sass/chip.scss:./dist/sidenav.css ",
     "test": "test",
     "build": "tsc",
     "tsc-watch": "tsc -w"

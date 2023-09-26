@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./dist/main.css">
+    <script type="module" src="./dist/sidenav.js" defer></script>
+    <script type="module" src="dist/sfap.js" defer></script>
+    <title>Super Fun Amazing Podcast!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Mukta:wght@200&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body">
+    <div class="sidenav">
+        <div id="greeting" class="sidenavtxt"></div>
+        <br>
+        <br>
+        <a href="chipadvisor.html" class="dropdownbtn-one">Chip Advisor</a>
+        <div class="dropdown-container-one">
+            <a class="dropdown-item-one-a" href="">Link 1</a>
+            <a class="dropdown-item-one-b" href="">Link 2</a>
+            <a class="dropdown-item-one-c" href="">Link 3</a>
+            <a class="dropdown-item-one-d" href="">Link 4</a>
+        </div>
+        <a href="theenglishmuffins.html" class="dropdownbtn-two">The English Muffins</a>
+        <div class="dropdown-container-two">
+            <a class="dropdown-item-two-a" href="">Link 1</a>
+            <a class="dropdown-item-two-b" href="">Link 2</a>
+            <a class="dropdown-item-two-c" href="">Link 3</a>
+            <a class="dropdown-item-two-d" href="">Link 4</a>
+        </div>
+        <a href="sfap.html" class="dropdownbtn-three">Super Fun Amazing Podcast</a>
+        <div class="dropdown-container-three">
+            <a class="dropdown-item-three-a" href="">Episodes</a>
+            <a class="dropdown-item-three-b" href="">Agony Bros</a>
+            <a class="dropdown-item-three-c" href="charts.html">Charts</a>
+            <a class="dropdown-item-three-e" href="">Josh and Taylor</a>
+        </div>
+        <br>
+
+        <button class="sidenavbottom">About Us</button>
+    </div>
+    <div class="main">
+        <img class="indeximg" src="img/sfaphero.jpg"></img>
+    </div>
+    <div class="topbar">
+        <div class="main" id="topbar">
+            <img class="indeximg" src="img/sfapbanner.jpg"></img>
+            <div class="buttonbox">
+                <a class="button-sfap">Episodes</a>
+                <a class="button-sfap">Agony Bros</a>
+                <a class="button-sfap" href="charts.html">Charts</a>
+                <a class="button-sfap">Josh & Taylor</a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <table id="chart-table-album" class="table">
+            <tr>
+                <th>Date</th>
+                <th onclick="sortTable(0)">Episode</th>
+                <th onclick="sortTable(1)">Band</th>
+                <th onclick="sortTable(2)">Album</th>
+                <th onclick="sortTable(3)">Standout Song</th>
+                <th>Rating</th>
+            </tr>
+            <tr>
+                <td>18/06/23</td>
+                <td>Italy</td>
+                <td>Banco Del Mutuo Soccorso</td>
+                <td>Darwin!</td>
+                <td>750000 anno fa..l'amore?</td>
+                <td>7.3</td>
+            </tr>
+            <tr>
+                <td>18/06/23</td>
+                <td>Italy</td>
+                <td>Walter Rossi</td>
+                <td>Walter Rossi</td>
+                <td>7.8</td>
+            </tr>
+            <tr>
+                <td>18/06/23</td>
+                <td>Italy</td>
+                <td>Lucio Battisti</td>
+                <td>Anima Latina</td>
+                <td>7.2</td>
+            </tr>
+            <tr>
+                <td>11/06/23</td>
+                <td>Greece</td>
+                <td>Vangelis</td>
+                <td>Earth</td>
+                <td>6.2</td>
+            </tr>
+            <tr>
+                <td>11/06/23</td>
+                <td>Greece</td>
+                <td>Margarita Zorbala</td>
+                <td>Pame San Allote</td>
+                <td>6.0</td>
+            </tr>
+            <tr>
+                <td>11/06/23</td>
+                <td>Greece</td>
+                <td>Manos Hadjidakis</td>
+                <td>Gioconda's Smile</td>
+                <td>6.8</td>
+            </tr>
+        </table>
+    </div>
+   
+</body>
+
+</html>

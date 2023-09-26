@@ -1,0 +1,58 @@
+.square {
+  background-color: rgba(246, 162, 52, 0.488);
+  border-color: rgb(232, 140, 19);
+  border-width: 1px;
+  border-style: solid;
+  font-family: "Inter", sans-serif;
+  width: 200px;
+  height: 230px;
+  text-align: center;
+  border-radius: 15px;
+  display: block;
+  animation: fadeIn 200ms ease-in;
+}
+
+.square:hover {
+  cursor: pointer;
+}
+
+.pic {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  border-radius: 25px;
+  height: 180px;
+  width: 180px;
+  position: initial;
+  opacity: 1;
+}
+
+.h1 {
+  font-size: 17px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+}
+
+.main-chip {
+  margin-left: 300px;
+  background-color: rgba(214, 132, 39, 0.7568627451);
+  text-align: left;
+  height: min-content;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+/*# sourceMappingURL=chip.css.map */
