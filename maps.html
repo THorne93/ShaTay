@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./dist/main.css">
+    <script type="module" src="./dist/chipadvisor.js" defer></script>
+    <title>Chip Advisor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Mukta:wght@200&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCk9hxblxmX_MyHi96yvG9ccn6dnC-jddk&callback=initMap&libraries=&v=weekly"
+        defer></script>
+    <script>
+        let map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: { lat: 37, lng: -3 },
+            });
+
+            const script = document.createElement('script');
+            script.src = './dist/chipadvisor.js';
+            document.body.appendChild(script);
+            setMarkers(map);
+        }
+        function setMarkers(map) {
+            fetch('chip-data1.json')
+                .then((response) => response.json())
+                .then((json) => {
+                    json.forEach((item, i) => {
+                        if (item.location && item.location.length > 0) {
+                            const location = item.location[0]; // Access the first location object
+                            const position = { lat: parseFloat(location.lat), lng: parseFloat(location.long) };
+
+                            let iconUrl;
+                            if (item.rating < 2) {
+                                iconUrl = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+                            } else if (item.rating < 3) {
+                                iconUrl = 'http://maps.google.com/mapfiles/ms/icons/orange-dot.png';
+                            } else if (item.rating < 4) {
+                                iconUrl = 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png';
+                            } else if (item.rating < 4.5) {
+                                iconUrl = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
+                            } else {
+                                iconUrl = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
+                            }
+
+                            const marker = new google.maps.Marker({
+                                position: position,
+                                map: map,
+                                title: location.name,
+                                label: item.rating.toString(), // Use the rating property as the label
+                                icon: {
+                                    url: iconUrl
+                                }
+
+                            });
+                            marker.addListener('click', function () {
+                                contentPane.innerHTML = '';
+                                const text = document.createElement("p")
+                                text.innerHTML = item.content
+                                const location = item.location[0];
+                                centerMap(parseFloat(location.lat), parseFloat(location.long));
+
+                                contentPane.appendChild(text)
+                                console.log('Marker clicked:', location.name);
+                            });
+                        } else {
+                            console.error("No location data found for item:", item);
+                        }
+                    });
+                });
+        }
+
+        function centerMap(lat, lng) {
+        if (map instanceof google.maps.Map) {
+            
+            map.panTo({ lat: lat, lng: lng });
+            map.setZoom(15);
+            
+        } else {
+            console.error('map is not an instance of google.maps.Map');
+        }
+    }
+    </script>
+</head>
+
+
+
+
+<body style="background-image: url('img/chipbackground.jpg');
+ background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;">
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="col-12">
+                <ul class="cards" id="card-container">
+
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-2">
+                <div id="map" class="map p-1 mx-auto" height="1000px"></div>
+            </div>
+            <div class="col-md-6 mt-2">
+                <div class="main-chip" id="contentPane">"I don't care about pictures or any of that shit. I'm going to
+                    go to bars/pubs/restaurants
+                    and give a review based on the quality of their chips. And only that. I'll judge them off many
+                    factors,
+                    including; taste, crispness, texture, seasoning, sauces and maybe others I don't know yet."<br>
+                    Taylor Horne,
+                    2018</div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+</html>
